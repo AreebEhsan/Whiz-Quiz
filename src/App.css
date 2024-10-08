@@ -1,38 +1,200 @@
+/* Container for the entire app */
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  background-image: url('/assets/bg.png');
+  background-size: cover; /* Ensure background image covers the viewport */
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh; /* Full viewport height */
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+}
+
+/* Main heading (title of the app) */
+h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #ffffff; /* Make the text white for better visibility against the background */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Add shadow to the text for better readability */
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Styling for the card */
+.card {
+  width: 600px;
+  height: auto;
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+  border: 1px solid #ccc;
+  border-radius: 10px; /* Rounded corners */
+  display: flex;
+  flex-direction: column; /* Stack content vertically */
+  justify-content: center;
+  align-items: center;
+  padding: 30px; /* Increase padding for better readability */
+  margin: 20px auto;
+  font-size: 1.5em;
+  line-height: 1.6; /* Increase line height for better text readability */
+  letter-spacing: 0.5px; /* Slight letter spacing for better clarity */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Card hover effect */
+.card:hover {
+  transform: scale(1.08); /* Slight zoom effect */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Add a stronger shadow effect */
+}
+
+/* Subject-specific card styling */
+.card.Physics {
+  background-color: rgba(52, 152, 219, 0.6); /* Darker blue for Physics */
+}
+
+.card.Chemistry {
+  background-color: rgba(241, 196, 15, 0.6); /* Darker yellow for Chemistry */
+}
+
+.card.Biology {
+  background-color: rgba(46, 204, 113, 0.6); /* Brighter green for Biology */
+}
+
+.card.EarthScience {
+  background-color: rgba(230, 126, 34, 0.6); /* Darker orange for Earth Science */
+}
+
+/* Difficulty-specific card borders */
+.card.Easy {
+  border: 3px solid #2ecc71; /* Green border for easy cards */
+}
+
+.card.Medium {
+  border: 3px solid #f39c12; /* Orange border for medium difficulty */
+}
+
+.card.Hard {
+  border: 3px solid #e74c3c; /* Red border for hard difficulty */
+}
+
+/* Styling for images within the card */
+.card-image {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  margin-bottom: 20px;
+}
+
+/* Styling for the input box and button */
+.guess-input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+}
+
+input {
+  padding: 10px;
+  font-size: 16px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  background-color: #4CAF50;
   color: white;
+  padding: 12px 25px; /* Increase padding for better interaction */
+  margin-top: 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.3s ease;
 }
 
-.App-link {
-  color: #61dafb;
+.streaks {
+  color: #6dfdff; /* Gold color or any color of your choice */
+  font-size: 1.2em;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Optional text shadow for better readability */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Button hover effect */
+button:hover {
+  background-color: #3e8e41;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow on hover */
+}
+.card-navigation {
+  display: flex;
+  justify-content: center; /* Ensure buttons are centered */
+  gap: 20px; /* Add space between the buttons */
+  margin-top: 20px; /* Optional: Add margin above the buttons */
+}
+
+.card-navigation button {
+  padding: 10px 20px; /* Add padding inside the buttons */
+  font-size: 16px; /* Adjust the button text size */
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.card-navigation button:hover {
+  background-color: #45a049; /* Change button color on hover */
+}
+
+
+/* Feedback styling */
+.feedback {
+  font-size: 1.5em;
+  color: #4CAF50; /* Green for correct */
+  margin-top: 10px;
+  animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .card {
+    width: 90%; /* Make the card width responsive */
+    height: auto; /* Adjust height based on content */
+    font-size: 1.2em;
   }
-  to {
-    transform: rotate(360deg);
+
+  h1 {
+    font-size: 2em; /* Make the title text responsive */
+  }
+
+  button {
+    font-size: 14px; /* Slightly smaller buttons on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    width: 95%; /* Almost full width on mobile */
+    font-size: 1em;
+  }
+
+  button {
+    padding: 8px 15px; /* Smaller button for mobile */
+    font-size: 14px;
+  }
+
+  h1 {
+    font-size: 1.8em; /* Reduce size of the title */
   }
 }
