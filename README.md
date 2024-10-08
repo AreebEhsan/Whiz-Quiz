@@ -2,7 +2,24 @@
 
 Submitted by: **Areeb Ehsan**
 
-This web app: **insert description**
+This web app: **The Ultimate Science Whiz Quiz is a flashcard-style web application designed to test and improve your knowledge of various scientific facts and concepts. This interactive quiz offers a wide range of science-related questions, from physics to chemistry, helping users engage with educational content in a fun and challenging way.
+
+Features:
+Flashcard System: The app presents science-related questions, and users can click to reveal the correct answers by flipping the cards.
+Guessing Mechanism: Users can type in their guesses for each question and receive feedback if their guess is correct or incorrect. The app even includes basic fuzzy matching to account for slight variations in the user's answer.
+Streak Tracking: Keep track of your correct answers with a streak counter! The app displays your current streak of correct answers, as well as your longest streak achieved.
+Navigation: Easily move between questions using the navigation buttons, or randomly shuffle the flashcards to test your knowledge in a new order.
+Responsive Interface: Designed to be user-friendly and interactive, the app allows users to engage with the flashcards intuitively.
+Technologies Used:
+React: The app is built using React, providing dynamic rendering of flashcards and managing state effectively.
+JavaScript: For handling card flips, tracking guesses, and implementing navigation logic.
+CSS: The app is styled using CSS, ensuring a clean and visually appealing user experience.
+How to Use:
+Flip a Card: Click on the flashcard to flip it and reveal the answer.
+Submit a Guess: Type your guess for each question in the input field and hit the submit button. Feedback will inform you whether your guess was correct or not.
+Track Your Progress: Keep an eye on your current streak of correct answers and challenge yourself to beat your longest streak.
+Shuffle the Cards: Want a new challenge? Hit the "Shuffle Cards" button to randomize the order of the flashcards.
+Navigate: Use the previous and next buttons to move between questions at your own pace.**
 
 Time spent: **2** hours spent in total
 
@@ -27,7 +44,7 @@ The following **optional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://github.com/AreebEhsan/Whiz-Quiz/blob/main/Updated-Ultimate-Science-Whiz-Quiz%20Demo.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 <!-- Replace this with whatever GIF tool you used! -->
 GIF created with ...  
