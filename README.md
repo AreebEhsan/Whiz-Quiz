@@ -2,7 +2,7 @@
 
 Submitted by: **Areeb Ehsan**
 
-This web app: **The Ultimate Science Whiz Quiz is a flashcard-style web application designed to test and improve your knowledge of various scientific facts and concepts. This interactive quiz offers a wide range of science-related questions, from physics to chemistry, helping users engage with educational content in a fun and challenging way.
+This web app: The Ultimate Science Whiz Quiz is a flashcard-style web application designed to test and improve your knowledge of various scientific facts and concepts. This interactive quiz offers a wide range of science-related questions, from physics to chemistry, helping users engage with educational content in a fun and challenging way.
 
 Features:
 Flashcard System: The app presents science-related questions, and users can click to reveal the correct answers by flipping the cards.
